@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Fullscreen from "./screens/Fullscreen";
+import Cursor from "./components/Cursor"
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+
+  return(
+    <div className="App"
+      onMouseMove={e => {
+        const cursor = document.querySelector(".cursor")
+        cursor.style.left = `${e.pageX}px`
+        cursor.style.top = `${e.pageY}px`
+      }}
+
+      // onMouseDown={() => {
+      //   const cursor = document.querySelector(".cursor")
+      //   cursor.classList.add("mouse-down")
+      // }}
+      
+      // onMouseUp={() => {
+      //   const cursor = document.querySelector(".cursor")
+      //   cursor.classList.remove("mouse-down")
+      // }}
+    
+      // onMouseLeave={() => {
+      //   const cursor = document.querySelector(".cursor")
+      //   cursor.classList.add("mouse-left")
+      // }}
+
+      // onMouseEnter={() => {
+      //   const cursor = document.querySelector(".cursor")
+      //   cursor.classList.remove("mouse-left")
+      // }}
+      > 
+
+      <Cursor/>
+      <Fullscreen/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
