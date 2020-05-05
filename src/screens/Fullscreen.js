@@ -1,15 +1,20 @@
 import React from 'react'
 
-const Fullscreen = () => {
+const Fullscreen = (props) => {
 
     return(
         <>
-            <ul>
-                <li>First</li>
-                <li>Second</li>
-                <li>Third</li>
-                <li>Fourth</li>
-            </ul>
+            <div className='test'>
+                <div className='hei'
+                    onMouseOver={e => {
+                        props.blogHover(e)
+                    }}
+                    onMouseLeave={e => {
+                        props.blogUnHover(e)
+                    }}
+                >
+                </div>
+            </div>
         </>
     )
 }

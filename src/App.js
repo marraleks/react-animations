@@ -5,6 +5,17 @@ import "./App.css";
 
 const App = () => {
 
+  const blogHover = e => {
+    const cursor = document.querySelector(".cursor")
+    cursor.classList.add("grow")
+  }
+
+  const blogUnHover = e => {
+    const cursor = document.querySelector(".cursor")
+    cursor.classList.remove("grow")
+  }
+
+
   return(
     <div className="App"
       onMouseMove={e => {
@@ -35,7 +46,7 @@ const App = () => {
       > 
 
       <Cursor/>
-      <Fullscreen/>
+      <Fullscreen blogHover={blogHover} blogUnHover={blogUnHover} />
     </div>
   )
 }
