@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body{
@@ -16,35 +15,35 @@ body{
   height: 100vh;
 }
 
-.test{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.hei{
-  background-color: red;
-  height: 100px;
-  width: 100px;
-}
-
 .cursor{
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid rgb(230, 230, 230);
-  
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid rgb(136, 136, 136);
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: all 0.2 ease;
+  transition: all 0.2s ease;
   transition-property: background, border, transform;
   transform-origin: 150% 150%;
-  z-index: 999;
+  z-index: 9; 
 }
 
 .grow {
   transform: scale(1.5);
-  background-color: yellow;
+  background: rgb(136, 136, 136);
+}
+
+.linkHover{
+  color: black;
+}
+
+.scrollContainer, .hamburger{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scrollContainer{
+  right: 5%;
 }

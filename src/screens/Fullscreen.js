@@ -1,21 +1,17 @@
 import React from 'react'
+import Burger from '../components/Burger/Burger'
+import ScrollContainer from '../components/ScrollContainer/ScrollContainer'
+
 
 const Fullscreen = (props) => {
-
     return(
-        <>
-            <div className='test'>
-                <div className='hei'
-                    onMouseOver={e => {
-                        props.blogHover(e)
-                    }}
-                    onMouseLeave={e => {
-                        props.blogUnHover(e)
-                    }}
-                >
-                </div>
-            </div>
-        </>
+        <div>
+            <ScrollContainer/>
+            <Burger 
+                hover={props.hover} 
+                unHover={props.unHover}
+            />
+        </div>
     )
 }
 
