@@ -1,24 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Burger from '../components/Burger/Burger'
 import Header from '../components/Header/Header'
-import ScrollContainer from '../components/ScrollContainer/ScrollContainer'
 import Slideshow from '../components/Slideshow/Slideshow'
 
 
 
 const Fullscreen = (props) => {
+    const [open, setOpen] = useState(false)
     return(
         <div>
-            <Header/>
+            <Header
+                open={open}
+                hover={props.hover} 
+                unHover={props.unHover}
+            />
             <Burger 
+                open={open}
+                setOpen={setOpen}
                 hover={props.hover} 
                 unHover={props.unHover}
             />
-            <Slideshow/>
-            <ScrollContainer
+            <Slideshow
+                open={open}
                 hover={props.hover} 
                 unHover={props.unHover}
             />
+            
         </div>
     )
 }

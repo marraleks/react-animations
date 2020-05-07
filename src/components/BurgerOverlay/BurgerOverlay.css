@@ -8,13 +8,14 @@
     align-items: center;
     position: absolute;
     background-color: rgb(92, 92, 92);
-    transition: 0.5s;
+    transition: 0.1s;
     background-color: red;
     color: white;
     opacity: 0;
+    z-index: 4;
   }
   
   .overlay.visible{
-    opacity: 0.6;
+    opacity: 1;
   }
   

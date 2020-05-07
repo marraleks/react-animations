@@ -1,16 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './burger.css'
 import BurgerOverlay from "../BurgerOverlay/BurgerOverlay";
 
 const Burger = (props) => {
-
-    const [open, setOpen] = useState(false)
-    console.log(open);
     return (
         <>
-           <BurgerOverlay open={open} setOpen={setOpen}/>
+           <BurgerOverlay open={props.open} setOpen={props.setOpen}/>
             <div 
-            onClick={() => setOpen(!open)}
+            onClick={() => props.setOpen(!props.open)}
             className='hamburger'
             onMouseOver={e => {
                 props.hover(e)

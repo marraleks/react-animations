@@ -5,7 +5,7 @@ import './ScrollContainer.css'
 const ScrollContainer = (props) => {
     return (
         <>
-            <div className='scrollContainer'
+            <div className={props.open ? 'scrollContainer active' : 'scrollContainer'}
                     onMouseOver={e => {
                         props.hover(e)
                     }}

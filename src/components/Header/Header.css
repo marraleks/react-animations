@@ -1,7 +1,11 @@
 .header{
     height: auto;
     width: auto;
-    z-index: 10;
+    z-index: 8;
+    display: block;
+}
+.header.active{
+    display: none;
 }
 
 nav{
@@ -13,15 +17,16 @@ nav{
     margin: auto;
     color: white;
     font-family: 'HKSemiBold';
+    z-index: 8;
 }
 
 .nav-links{
     display: flex;
     justify-content: space-between;
     list-style: none;
-}
+    z-index: 8;}
 
 .nav-links, 
 h1{
     flex: 1;
-}
+    z-index: 8;}
