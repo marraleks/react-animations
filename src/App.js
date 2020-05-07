@@ -2,6 +2,7 @@ import React from 'react'
 import Fullscreen from "./screens/Fullscreen";
 import Cursor from "./assets/Cursor"
 import "./App.css";
+import Card from './components/Card/Card'
 
 const App = () => {
   const hover = e => {
@@ -22,7 +23,6 @@ const App = () => {
         cursor.style.top = `${e.pageY}px`
       }}
       > 
-
       <Cursor/>
       <Fullscreen 
         hover={hover} 

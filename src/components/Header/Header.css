@@ -10,16 +10,17 @@
 
 nav{
     display: flex;
-    justify-content: space-between;
     width: 90%;
     min-height: 15vh;
     align-items: center;
     margin: auto;
-    color: white;
+    color: black;
     font-family: 'HKSemiBold';
     z-index: 8;
 }
-
+ul{
+    margin-right: 50px;
+}
 .nav-links{
     display: flex;
     justify-content: space-between;
@@ -27,6 +28,8 @@ nav{
     z-index: 8;}
 
 .nav-links, 
-h1{
+.img{
     flex: 1;
-    z-index: 8;}
+    z-index: 8;
+}
+

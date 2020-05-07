@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'IntegralCF-Bold';
+  font-family: 'IntegralCF';
   src: local('IntegralCF-Bold'), url(./fonts/IntegralCF-Bold.otf) format('truetype');
 }
 @font-face {
@@ -27,7 +27,7 @@
 body{
   height: 100vh;
   width: 100vw;
-  background-color: #222;
+  background-color: rgb(255, 255, 255);
 }
 
 .App{
@@ -37,7 +37,7 @@ body{
 .cursor{
   width: 2.5rem;
   height: 2.5rem;
-  border: 3px solid rgb(136, 136, 136);
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -50,8 +50,8 @@ body{
 
 .grow {
   transform: scale(1.5);
-  background: rgb(0, 0, 0);
-  border: black;
+  background: rgb(194, 194, 194);
+  border: rgb(255, 255, 255);
 
 }
 

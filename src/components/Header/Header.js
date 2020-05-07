@@ -1,19 +1,22 @@
 import React from 'react'
 import './Header.css'
+import Logo from '../../assets/logo/logo.png'
 
 
 const Header = (props) => {
 
     const li = [
-        "lorem",
-        "ipsum",
-        "ditt"
+        "Home",
+        "Shop",
+        "About"
     ]
     return (
         <>
             <header className={props.open ? 'header active' : 'header'}>
                 <nav>
-                    <h1>React Fun</h1>
+                    <div className='img'>
+                        <img src={Logo} alt='logo' height='40px'/>
+                    </div>
                     <ul className='nav-links'
                         >
                         {
