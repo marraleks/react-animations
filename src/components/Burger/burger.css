@@ -1,9 +1,9 @@
 .hamburger{
 	position:absolute;
 	top:50%;
-	left:5%;
-  transform:translateY(-50%);
-  z-index: 10;
+	left:6%;
+  	transform:translateY(-50%);
+  	z-index: 10;
 }
 .hamburger span{
 	display:block;

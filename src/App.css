@@ -1,8 +1,27 @@
+@font-face {
+  font-family: 'IntegralCF-Bold';
+  src: local('IntegralCF-Bold'), url(./fonts/IntegralCF-Bold.otf) format('truetype');
+}
+@font-face {
+  font-family: 'HKRegular';
+  src: local('HKGrotesk-Regular'), url(./fonts/HKGrotesk-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'HKSemiBold';
+  src: local('HKGrotesk-SemiBold'), url(./fonts/HKGrotesk-SemiBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'HKExtraBold';
+  src: local('HKGrotesk-ExtraBold'), url(./fonts/HKGrotesk-ExtraBold.ttf) format('truetype');
+}
+
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  cursor: none;
 }
 
 body{
@@ -31,19 +50,13 @@ body{
 
 .grow {
   transform: scale(1.5);
-  background: rgb(136, 136, 136);
+  background: rgb(0, 0, 0);
+  border: black;
+
 }
 
 .linkHover{
   color: black;
 }
 
-.scrollContainer, .hamburger{
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
-.scrollContainer{
-  right: 5%;
-}

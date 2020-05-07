@@ -1,0 +1,27 @@
+.header{
+    height: auto;
+    width: auto;
+    z-index: 10;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    min-height: 15vh;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-family: 'HKSemiBold';
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-links, 
+h1{
+    flex: 1;
+}

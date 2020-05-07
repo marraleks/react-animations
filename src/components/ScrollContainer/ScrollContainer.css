@@ -1,0 +1,26 @@
+.scrollContainer{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'HKSemiBold';
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+.srollSeperator{
+    background-color: white;
+    height: 2px;
+    width: 50px;
+    margin: 10px 0 10px 0;
+}
+
+
+

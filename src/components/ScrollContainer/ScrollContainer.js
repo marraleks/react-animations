@@ -1,10 +1,22 @@
 import React from 'react'
+import './ScrollContainer.css'
 
 
-const ScrollContainer = () => {
+const ScrollContainer = (props) => {
     return (
         <>
-            <h1 className='scrollContainer'>Test</h1>
+            <div className='scrollContainer'
+                    onMouseOver={e => {
+                        props.hover(e)
+                    }}
+                    onMouseLeave={e => {
+                        props.unHover(e)
+                    }}>
+                <p className='current'>1</p>
+                    <div className='srollSeperator'></div>
+                <p className='total'>6</p>
+            </div>
+
         </>
     )
 }
