@@ -7,10 +7,26 @@ const images = [
     'images/bilde2.jpg',
     'images/bilde3.jpg'
 ]
+
+const hoverImg = () => {
+    const cursor = document.querySelector(".cursor")
+    cursor.classList.add("imghover")
+  } 
+  const unHoverImg = () => {
+    const cursor = document.querySelector(".cursor")
+    cursor.classList.remove("imghover")
+  }
+
   const Slideshow = (props) => {
       return (
         <div className='fullscreen'>
-            <div className='slideshow'>
+            <div className='slideshow'
+                onMouseOver={e => {
+                    hoverImg(e)
+                }}
+                onMouseLeave={e => {
+                    unHoverImg(e)
+                }}>
                 {/* {
                     images.map((each, index) => 
                         <img key={index} style={{height: "100%"}} src={each} />)

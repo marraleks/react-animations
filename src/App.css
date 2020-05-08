@@ -42,16 +42,25 @@ body{
   position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: all 0.2s ease;
+  transition: all 0s ease;
   transition-property: background, border, transform;
   transform-origin: 150% 150%;
   z-index: 6; 
 }
 
 .grow {
+  transition: 0.2s;
+  transition-property: background, border, transform;
   transform: scale(1.5);
   background: rgb(0, 0, 0);
   border: rgb(0, 0, 0);
+}
+
+.imghover{
+  border: none;
+  transform-origin: 60% 60%;
+  transform: scale(6);
+  backdrop-filter: sepia(500%);
 }
 
 .linkHover{

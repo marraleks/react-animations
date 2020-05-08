@@ -4,12 +4,11 @@ import Cursor from "./assets/Cursor"
 import "./App.css";
 
 const App = () => {
-  const hover = e => {
+  const hover = () => {
     const cursor = document.querySelector(".cursor")
     cursor.classList.add("grow")
   }
-
-  const unHover = e => {
+  const unHover = () => {
     const cursor = document.querySelector(".cursor")
     cursor.classList.remove("grow")
   }
