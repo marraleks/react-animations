@@ -1,21 +1,49 @@
 .overlay{
-    height: 100vh;
-    width: 100vw;
+    height: 0;
+    width: 0;
     position: absolute;
-    top: 0;
+    top: 50%;
+    left: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     background-color: rgb(92, 92, 92);
     transition: 0.1s;
-    background-color: red;
-    color: white;
-    opacity: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    opacity: 1;
     z-index: 4;
+    transition: 0.5s;
+    overflow: hidden;
   }
-  
+
+  .overlay > .burger-content{
+    font-size: 3rem;
+    color: rgb(37, 37, 37);
+    font-family: 'IntegralCF';
+    position: relative;
+    display: flex;
+    align-items: center;
+    right: 300px;
+    width: 300px;
+    height: 100vh;
+  }
+
   .overlay.visible{
     opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
   }
-  
+
+  .burger-content > ul {
+    transform: translateX(-100%);
+    transition: 1s;
+    
+  }
+
+  .overlay.visible .burger-content > ul {
+    transform: translateX(0%);
+  }

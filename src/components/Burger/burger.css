@@ -1,10 +1,19 @@
 .hamburger{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position:absolute;
 	top:50%;
 	left:6%;
   	transform:translateY(-50%);
 	z-index: 10;
-	
+	width: 50px;
+	height: 40px;
+}
+
+.hamburger.active > span{
+	margin-bottom:0px;
+	transition: 0.2s;
 }
 
 .hamburger:hover > span:before{
@@ -21,6 +30,8 @@
 	margin-bottom:8px;
 	overflow:hidden;
 	position:relative;
+	transition: 0.2s;
+
 }
 .hamburger span:last-child{
 	margin:0;
@@ -37,10 +48,13 @@
 }
 
 @keyframes leftBurger{
+	30%, 100%{
+		opacity: 0;
+	}
     0%{
 		transform:translateX(0%);
     }
-    100%{
+    30%{
 		transform:translateX(-200%);
     }
 }
@@ -49,16 +63,16 @@
     0%{
 		transform:translateX(200%);
     }
-    100%{
+    30%{
 		transform:translateX(0%);
     }
 }
 
 .hamburger:hover span:after{
-    animation: leftBurger 1s ease-in-out;
+    animation: leftBurger 3s ease-in-out infinite;
 }
 .hamburger:hover span:before{
-    animation: rightBurger 1s ease-in-out;
+    animation: rightBurger 3s ease-in-out infinite;
 }
 
 .hamburger span:nth-child(2):before,.hamburger span:nth-child(2):after{

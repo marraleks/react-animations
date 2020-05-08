@@ -6,8 +6,8 @@ import Logo from '../../assets/logo/logo.png'
 const Header = (props) => {
 
     const li = [
-        "Home",
         "Shop",
+        "Gallery",
         "About"
     ]
     return (

@@ -3,12 +3,15 @@ import './burger.css'
 import BurgerOverlay from "../BurgerOverlay/BurgerOverlay";
 
 const Burger = (props) => {
+
+
+
     return (
         <>
            <BurgerOverlay open={props.open} setOpen={props.setOpen}/>
-            <div 
+            <div
             onClick={() => props.setOpen(!props.open)}
-            className='hamburger'
+            className={!props.open ? 'hamburger' : 'hamburger active'}
             onMouseOver={e => {
                 props.hover(e)
             }}
