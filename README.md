@@ -14,13 +14,13 @@ Click on [ME](https://mariussletten.no/) to view project.
 
 
 ```
-// First
+/First/
 git clone https://github.com/marraleks/react-animations
-// Second
+/Second/
 cd react-animations
-// Third
+/Third/
 npm install
-// Fourth
+/Fourth/
 npm start
 ```
 
