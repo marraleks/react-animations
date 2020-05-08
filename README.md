@@ -8,17 +8,19 @@ Individual school project created with react to get a better understanding of ho
 
 ## View project
 
-Click on this link  to [ME](https://mariussletten.no/) to view project.
+Click on [ME](https://mariussletten.no/) to view project.
 
 ## Install and view locally.
 
 
 ```
-/*first*/ 
-git clone https://github.com/marraleks/tema16
-/*then*/
+// First
+git clone https://github.com/marraleks/react-animations
+// Second
+cd react-animations
+// Third
 npm install
-/*then*/
+// Fourth
 npm start
 ```
 
