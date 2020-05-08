@@ -14,14 +14,15 @@ const Header = (props) => {
         <>
             <header className={props.open ? 'header active' : 'header'}>
                 <nav>
-                    <div className='img'>
+                    <div className='logo'>
                         <img src={Logo} alt='logo' height='40px'/>
+                        <p>MounTop</p>
                     </div>
                     <ul className='nav-links'
                         >
                         {
                             li.map(
-                                (each, index) => <li key={index}
+                                (each, index) => <li className={"li"+index} key={index}
                                 onMouseOver={e => {
                                     props.hover(e)
                                 }}

@@ -50,9 +50,8 @@ body{
 
 .grow {
   transform: scale(1.5);
-  background: rgb(194, 194, 194);
-  border: rgb(255, 255, 255);
-
+  background: rgb(0, 0, 0);
+  border: rgb(0, 0, 0);
 }
 
 .linkHover{

@@ -25,11 +25,28 @@ ul{
     display: flex;
     justify-content: space-between;
     list-style: none;
-    z-index: 8;}
+    z-index: 8;
+}
+
+.li0:hover,
+.li1:hover,
+.li2:hover{
+    color: white;
+}
 
 .nav-links, 
-.img{
+.logo{
     flex: 1;
     z-index: 8;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo > p{
+    font-family: 'HKRegular';
+    align-self: flex-end;
+    padding-bottom: 5px;
 }
 
