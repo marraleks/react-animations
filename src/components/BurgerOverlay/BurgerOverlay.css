@@ -47,3 +47,10 @@
   .overlay.visible .burger-content > ul {
     transform: translateX(0%);
   }
+
+  .Home:hover,
+  .Shop:hover,
+  .Gallery:hover,
+  .About:hover{
+    color: rgb(0, 0, 0);
+  }

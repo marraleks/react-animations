@@ -8,10 +8,10 @@ const CurrentHover = (props) => {
         display: absolute;
         color: rgb(37, 37, 37, 0.3);
         font-family: 'IntegralCF'; 
-        font-size: 10rem;
+        font-size: 15rem;
         position: absolute;
-        left: ${props.xPos - 100}px;
-        top: ${props.yPos - 100}px;
+        left: ${props.xPos - 200}px;
+        top: ${props.yPos - 200}px;
     `
     return(
         <BackText>{props.currentHover}</BackText>

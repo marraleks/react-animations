@@ -33,7 +33,7 @@ const Burger = (props) => {
                     }}>
                         {
                             menuLi.map(
-                                (eachLi, index) => <li key={index}
+                                (eachLi, index) => <li className={eachLi} key={index}
                                 onMouseEnter={() => setHover(true)}
                                 // eslint-disable-next-line react/jsx-no-duplicate-props
                                 onMouseOver={() => 
