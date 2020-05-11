@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Slideshow.css'
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ScrollContainer from '../ScrollContainer/ScrollContainer'
 
 
@@ -64,8 +65,8 @@ const hoverImg = () => {
             </div>
 
             <div className="slideshow-controls">
-                <div onClick={goToPrev}>Prev</div>
-                <div onClick={goToNext}>Next</div>
+                <IoIosArrowBack onClick={goToPrev} size="30"/>
+                <IoIosArrowForward onClick={goToNext} size="30"/>
             </div>
             <ScrollContainer
             open={props.open}

@@ -53,10 +53,9 @@
 }
 
 .slideshow-controls{
-  background-color: red;
   position: absolute;
   display: grid;
   grid-auto-flow: column;
-  gap: 30px;
+  gap: 100px;
   top: 80%;
 }
