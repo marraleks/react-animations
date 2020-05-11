@@ -67,4 +67,17 @@ body{
   color: black;
 }
 
-
+@media only screen and (max-width: 1000px) {
+  body::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "Dette er en test";
+    font-family: "IntegralCF";
+    position: absolute;
+    z-index: 9999;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+  }
+}

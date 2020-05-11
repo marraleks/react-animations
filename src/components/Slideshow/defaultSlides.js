@@ -1,17 +1,14 @@
 export default [
     {
-        title: 'First slide!',
-        subtitle: "1",
+        number: 1,
         image: 'images/bilde1.jpg',
     },
     {
-        title: "Second Slide",
-        subtitle: "2",
+        number: 2,
         image: 'images/bilde2.jpg',
     },
     {
-        title: "Third Slide",
-        subtitle: "3",
+        number: 3,
         image: 'images/bilde3.jpg',
     },
 ]

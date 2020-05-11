@@ -46,11 +46,11 @@ const hoverImg = () => {
                 {props.slides.map((s, i) => (
                 <div
                         className={i === curr ? "slide active" : "slide"}
-                        key={s.title}
+                        key={s.number}
                         aria-hidden={i !== curr}>
                 {i === curr && (
                     <img 
-                    className="image" 
+                    className="image"
                     src={s.image} 
                     alt={`${s.title}`} />
                 )}
@@ -64,11 +64,24 @@ const hoverImg = () => {
                 ))}
             </div>
 
-            <div className="slideshow-controls">
-                <IoIosArrowBack onClick={goToPrev} size="30"/>
-                <IoIosArrowForward onClick={goToNext} size="30"/>
+            <div className="slideshow-controls" >
+                <IoIosArrowBack className="left" size="30" onClick={goToPrev} 
+                    onMouseOver={e => {
+                        props.hover(e)
+                    }}
+                    onMouseLeave={e => {
+                        props.unHover(e)
+                    }}/>
+                <IoIosArrowForward className="right" size="30" onClick={goToNext}
+                    onMouseOver={e => {
+                        props.hover(e)
+                    }}
+                    onMouseLeave={e => {
+                        props.unHover(e)
+                    }}/>
             </div>
             <ScrollContainer
+            current={{curr, length}}
             open={props.open}
             hover={props.hover}
             unHover={props.unHover}/>
