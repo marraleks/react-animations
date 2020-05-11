@@ -1,12 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Slideshow.css'
 import ScrollContainer from '../ScrollContainer/ScrollContainer'
 
-const images = [
-    'images/bilde1.jpg',
-    'images/bilde2.jpg',
-    'images/bilde3.jpg'
-]
+
 
 const hoverImg = () => {
     const cursor = document.querySelector(".cursor")
@@ -18,20 +14,58 @@ const hoverImg = () => {
   }
 
   const Slideshow = (props) => {
+    
+    const [curr, setCurr] = useState(0);
+    const { length } = props.slides;
+    
+    const goToNext = () => {
+        setCurr(curr === length - 1 ? 0 : curr + 1);
+    }
+      
+    const goToPrev = () => {
+        setCurr(curr === 0  ? length - 1 : curr - 1);
+    }
+  
+   
+    
+    if (!Array.isArray(props.slides) || length <= 0) {
+        return null;
+    }
+
       return (
         <div className='fullscreen'>
-            <div className='slideshow'
+            <div className='slider'
                 onMouseOver={e => {
                     hoverImg(e)
                 }}
                 onMouseLeave={e => {
                     unHoverImg(e)
                 }}>
-                {/* {
-                    images.map((each, index) => 
-                        <img key={index} style={{height: "100%"}} src={each} />)
-                } */}
-                <img src={images[0]} alt='test' height='100%'></img>
+                   
+                {props.slides.map((s, i) => (
+                <div
+                        className={i === curr ? "slide active" : "slide"}
+                        key={s.title}
+                        aria-hidden={i !== curr}>
+                {i === curr && (
+                    <img 
+                    className="image" 
+                    src={s.image} 
+                    alt={`${s.title}`} />
+                )}
+                    {/*
+                    <div 
+                        className="currentSlide">{s.subtitle}<br/>{props.slides.length}
+                    </div>
+                    */
+                    }
+                </div>
+                ))}
+            </div>
+
+            <div className="slideshow-controls">
+                <div onClick={goToPrev}>Prev</div>
+                <div onClick={goToNext}>Next</div>
             </div>
             <ScrollContainer
             open={props.open}

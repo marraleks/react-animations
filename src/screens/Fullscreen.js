@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Burger from '../components/Burger/Burger'
 import Header from '../components/Header/Header'
 import Slideshow from '../components/Slideshow/Slideshow'
+import defaultSlides from '../components/Slideshow/defaultSlides.js'
 
 
 
@@ -21,6 +22,7 @@ const Fullscreen = (props) => {
                 unHover={props.unHover}
             />
             <Slideshow
+                slides={defaultSlides}
                 open={open}
                 hover={props.hover} 
                 unHover={props.unHover}
