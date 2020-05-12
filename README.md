@@ -8,19 +8,19 @@ Individual school project created with react to get a better understanding of ho
 
 ## View project
 
-Click on [ME](https://mariussletten.no/) to view project.
+Click on [ME](https://react-animations-oeugvsh75.now.sh/) to view project. Deployed using [Vercel](https://vercel.com/).
 
 ## Install and view locally.
 
 
 ```
-/First/
+//First
 git clone https://github.com/marraleks/react-animations
-/Second/
+//Second
 cd react-animations
-/Third/
+//Third
 npm install
-/Fourth/
+//Fourth
 npm start
 ```
 
