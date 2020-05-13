@@ -6,8 +6,8 @@
     align-items: center;
     flex-direction: column;
     color: black;
-    font-size: 1.5rem;
-    font-family: 'HKSemiBold';
+    font-size: 1rem;
+    font-family: 'HKExtraBold';
     z-index: 10;
     position: fixed;
     top: 50%;
@@ -21,13 +21,27 @@
 
 .srollSeperator{
     background-color: black;
-    height: 2px;
-    width: 50px;
+    height: 1px;
+    width: 30px;
     margin: 10px 0 10px 0;
 }
 
-.scrollContainer > p:hover, .srollSeperator:hover{
+.scrollContainer > p:hover, .scrollContainer > .current-container:hover{
     color: white;
 }
 
+.current-container{
+    display: flex;
+    height: auto;
+    width: 18.97px;
+}
 
+.current{
+    position: absolute;
+    transform: translateY(-200%);
+}
+
+.current.active{
+    transform: translateY(0);
+    transition: 0.5s;
+}

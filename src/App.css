@@ -72,7 +72,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    content: "Dette er en test";
+    text-align: center;
+    content: "This project was developed with desktop in mind, please expand your browers or switch device.";
     font-family: "IntegralCF";
     position: absolute;
     z-index: 9999;

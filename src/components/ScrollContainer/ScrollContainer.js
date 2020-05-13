@@ -12,9 +12,16 @@ const ScrollContainer = (props) => {
                     onMouseLeave={e => {
                         props.unHover(e)
                     }}>
-                <p className='current'>{props.current.curr + 1}</p>
+                <div className='current-container'>
+                            <p>0</p>
+                        <div>
+                            <p className={props.current.curr === 0 ? "current active" : "current"}>1</p>
+                            <p className={props.current.curr === 1 ? "current active" : "current"}>2</p>
+                            <p className={props.current.curr === 2 ? "current active" : "current"}>3</p>
+                        </div>
+                </div>
                     <div className='srollSeperator'></div>
-                <p className='total'>{props.current.length}</p>
+                <p className='total'>0{props.current.length}</p>
             </div>
 
         </>

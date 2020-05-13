@@ -54,12 +54,6 @@ const hoverImg = () => {
                     src={s.image} 
                     alt={`${s.title}`} />
                 )}
-                    {/*
-                    <div 
-                        className="currentSlide">{s.subtitle}<br/>{props.slides.length}
-                    </div>
-                    */
-                    }
                 </div>
                 ))}
             </div>
