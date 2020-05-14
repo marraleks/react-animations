@@ -57,18 +57,16 @@ const Slideshow = (props) => {
 
   return (
     <div className="fullscreen">
-      <div
-        className="container"
-        onMouseOver={(e) => {
-          hoverImg(e);
-        }}
-        onMouseLeave={(e) => {
-          unHoverImg(e);
-        }}
-      >
+      <div className="container">
         <>
           {props.slides.map((s, i) => (
             <div
+              onMouseOver={(e) => {
+                hoverImg(e);
+              }}
+              onMouseLeave={(e) => {
+                unHoverImg(e);
+              }}
               className={i === curr ? "img-container" : ""}
               key={s.number}
               aria-hidden={i !== curr}
@@ -85,7 +83,6 @@ const Slideshow = (props) => {
           ))}
         </>
       </div>
-
       <div className="slideshow-controls">
         <IoIosArrowBack
           className="left"
@@ -110,8 +107,9 @@ const Slideshow = (props) => {
           }}
         />
       </div>
+
       <ScrollContainer
-        current={{curr, length}}
+        current={{ curr, length }}
         open={props.open}
         hover={props.hover}
         unHover={props.unHover}

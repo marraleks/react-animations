@@ -1,47 +1,48 @@
-.scrollContainer{
-    height: 100px;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: black;
-    font-size: 1rem;
-    font-family: 'HKExtraBold';
-    z-index: 10;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 5%;
+.scrollContainer {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  font-size: 1rem;
+  font-family: "HKExtraBold";
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
 }
 
-.scrollContainer.active{
-    display: none;
+.scrollContainer.active {
+  display: none;
 }
 
-.srollSeperator{
-    background-color: black;
-    height: 1px;
-    width: 30px;
-    margin: 10px 0 10px 0;
+.srollSeperator {
+  background-color: black;
+  height: 1px;
+  width: 30px;
+  margin: 10px 0 10px 0;
 }
 
-.scrollContainer > p:hover, .scrollContainer > .current-container:hover{
-    color: white;
+.scrollContainer > p:hover,
+.scrollContainer > .current-container:hover {
+  color: white;
 }
 
-.current-container{
-    display: flex;
-    height: auto;
-    width: 18.97px;
+.current-container {
+  display: flex;
+  height: auto;
+  width: 18.97px;
 }
 
-.current{
-    position: absolute;
-    transform: translateY(-200%);
+.current {
+  position: absolute;
+  transform: translateY(-200%);
 }
 
-.current.active{
-    transform: translateY(0);
-    transition: 0.5s;
+.current.active {
+  transform: translateY(0);
+  transition: 0.5s;
 }
