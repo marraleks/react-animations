@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import './Slideshow.css'
+import React, { useState, useRef, useEffect } from 'react';
+import './Slideshow.scss'
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ScrollContainer from '../ScrollContainer/ScrollContainer'
-
-
+import { TimelineLite, Power2, CSSRulePlugin } from "gsap/all";
 
 const hoverImg = () => {
     const cursor = document.querySelector(".cursor")
@@ -15,9 +14,24 @@ const hoverImg = () => {
   }
 
   const Slideshow = (props) => {
-    
     const [curr, setCurr] = useState(0);
     const { length } = props.slides;
+
+    let image = useRef(null)
+    let imageReveal = CSSRulePlugin.getRule(".img-container:after");
+
+    let tl = new TimelineLite();
+
+    useEffect(() => {
+        tl.from(imageReveal, 1.4, { width: "100%", ease: Power2.easeInOut });
+        tl.from(image, 1.4, {
+          scale: 1.6,
+          ease: Power2.easeInOut,
+          delay: -1.4
+        });
+      });
+
+    
     
     const goToNext = () => {
         setCurr(curr === length - 1 ? 0 : curr + 1);
@@ -26,36 +40,36 @@ const hoverImg = () => {
     const goToPrev = () => {
         setCurr(curr === 0  ? length - 1 : curr - 1);
     }
-  
    
-    
     if (!Array.isArray(props.slides) || length <= 0) {
         return null;
     }
 
       return (
         <div className='fullscreen'>
-            <div className='slider'
+            <div className='container'
                 onMouseOver={e => {
                     hoverImg(e)
                 }}
                 onMouseLeave={e => {
                     unHoverImg(e)
                 }}>
-                   
+                <>
                 {props.slides.map((s, i) => (
                 <div
-                        className={i === curr ? "slide active" : "slide"}
+                        className={i === curr ? "img-container" : ""}
                         key={s.number}
                         aria-hidden={i !== curr}>
                 {i === curr && (
                     <img 
+                    ref={el => image = el}
                     className="image"
                     src={s.image} 
-                    alt={`${s.title}`} />
+                    alt={`${s.number}`} />
                 )}
                 </div>
                 ))}
+             </>
             </div>
 
             <div className="slideshow-controls" >
