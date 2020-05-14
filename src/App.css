@@ -1,22 +1,25 @@
 @font-face {
-  font-family: 'IntegralCF';
-  src: local('IntegralCF-Bold'), url(./fonts/IntegralCF-Bold.otf) format('truetype');
+  font-family: "IntegralCF";
+  src: local("IntegralCF-Bold"),
+    url(./fonts/IntegralCF-Bold.otf) format("truetype");
 }
 @font-face {
-  font-family: 'HKRegular';
-  src: local('HKGrotesk-Regular'), url(./fonts/HKGrotesk-Regular.ttf) format('truetype');
+  font-family: "HKRegular";
+  src: local("HKGrotesk-Regular"),
+    url(./fonts/HKGrotesk-Regular.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'HKSemiBold';
-  src: local('HKGrotesk-SemiBold'), url(./fonts/HKGrotesk-SemiBold.ttf) format('truetype');
+  font-family: "HKSemiBold";
+  src: local("HKGrotesk-SemiBold"),
+    url(./fonts/HKGrotesk-SemiBold.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'HKExtraBold';
-  src: local('HKGrotesk-ExtraBold'), url(./fonts/HKGrotesk-ExtraBold.ttf) format('truetype');
+  font-family: "HKExtraBold";
+  src: local("HKGrotesk-ExtraBold"),
+    url(./fonts/HKGrotesk-ExtraBold.ttf) format("truetype");
 }
 
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -24,17 +27,17 @@
   cursor: none;
 }
 
-body{
+body {
   height: 100vh;
   width: 100vw;
   background-color: rgb(255, 255, 255);
 }
 
-.App{
+.App {
   height: 100vh;
 }
 
-.cursor{
+.cursor {
   width: 2.5rem;
   height: 2.5rem;
   border: 3px solid rgb(0, 0, 0);
@@ -45,7 +48,7 @@ body{
   transition: all 0s ease;
   transition-property: background, border, transform;
   transform-origin: 150% 150%;
-  z-index: 6; 
+  z-index: 6;
 }
 
 .grow {
@@ -56,14 +59,14 @@ body{
   border: rgb(0, 0, 0);
 }
 
-.imghover{
+.imghover {
   border: none;
   transform-origin: 60% 60%;
   transform: scale(6);
-  backdrop-filter: sepia(500%);
+  backdrop-filter: sepia(90%);
 }
 
-.linkHover{
+.linkHover {
   color: black;
 }
 
