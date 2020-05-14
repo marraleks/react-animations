@@ -1,7 +1,9 @@
 import React from "react";
 import Fullscreen from "./screens/Fullscreen";
 import Cursor from "./assets/Cursor";
+import About from "./screens/About";
 import "./App.css";
+import { Router } from "@reach/router";
 
 const App = () => {
   const hover = () => {
@@ -23,7 +25,10 @@ const App = () => {
       }}
     >
       <Cursor />
-      <Fullscreen hover={hover} unHover={unHover} />
+      <Router basepath={process.env.PUBLIC_URL}>
+        <Fullscreen default path="/Home" hover={hover} unHover={unHover} />
+        <About path="/About" hover={hover} unHover={unHover} />
+      </Router>
     </div>
   );
 };
