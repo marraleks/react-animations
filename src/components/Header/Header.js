@@ -10,7 +10,6 @@ const Header = (props) => {
         <nav>
           <div className="logo">
             <img src={Logo} alt="logo" height="40px" />
-            <p>MountSkull</p>
           </div>
           <ul className="nav-links">
             {li.map((each, index) => (

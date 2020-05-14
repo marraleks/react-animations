@@ -1,56 +1,52 @@
-.overlay{
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: rgb(92, 92, 92);
-    transition: 0.1s;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    opacity: 1;
-    z-index: 4;
-    transition: 0.5s;
-    overflow: hidden;
-  }
+.overlay {
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: 0.1s;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+}
 
-  .overlay > .burger-content{
-    font-size: 3rem;
-    color: rgb(37, 37, 37);
-    font-family: 'IntegralCF';
-    position: relative;
-    display: flex;
-    align-items: center;
-    right: 300px;
-    width: 300px;
-    height: 100vh;
-  }
+.overlay > .burger-content {
+  font-size: 3rem;
+  color: rgb(37, 37, 37);
+  font-family: "IntegralCF";
+  position: relative;
+  display: flex;
+  align-items: center;
+  right: 300px;
+  width: 300px;
+  height: 100vh;
+}
 
-  .overlay.visible{
-    opacity: 1;
-    height: 100vh;
-    width: 100vw;
-    top: 0%;
-    left: 0%;
-  }
+.overlay.visible {
+  opacity: 1;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: unset;
+}
 
-  .burger-content > ul {
-    transform: translateX(-100%);
-    transition: 1s;
-    
-  }
+.burger-content > ul {
+  transform: translateX(-100%);
+  transition: 1s;
+}
 
-  .overlay.visible .burger-content > ul {
-    transform: translateX(0%);
-  }
+.overlay.visible .burger-content > ul {
+  transform: translateX(0%);
+}
 
-  .Home:hover,
-  .Shop:hover,
-  .Gallery:hover,
-  .About:hover{
-    color: rgb(0, 0, 0);
-  }
+.Home:hover,
+.Shop:hover,
+.Gallery:hover,
+.About:hover {
+  color: rgb(0, 0, 0);
+}
