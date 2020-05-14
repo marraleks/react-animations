@@ -23,7 +23,7 @@ const hoverImg = () => {
     let tl = new TimelineLite();
 
     useEffect(() => {
-        tl.from(imageReveal, 1.4, { width: "100%", ease: Power2.easeInOut });
+        tl.to(imageReveal, 1.4, { width: "0%", ease: Power2.easeInOut })
         tl.from(image, 1.4, {
           scale: 1.6,
           ease: Power2.easeInOut,
