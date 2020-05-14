@@ -111,7 +111,7 @@ const Slideshow = (props) => {
         />
       </div>
       <ScrollContainer
-        current={{ curr, length }}
+        current={{curr, length}}
         open={props.open}
         hover={props.hover}
         unHover={props.unHover}
