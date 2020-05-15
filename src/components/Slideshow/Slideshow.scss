@@ -55,3 +55,27 @@
   color: white;
   z-index: 100;
 }
+
+@media (max-width: 1000px) {
+  .fullscreen{
+    .container {
+      width: 80vw;
+      height: 50vh;
+      }
+    }
+  .right:hover,
+  .left:hover {
+    color: black;
+    z-index: 100;
+  }
+  
+  @media (max-width: 600px){
+    .fullscreen{
+      .container{
+        width: 80vw;
+        height: 30vh;
+      }
+    }
+    
+  }
+}

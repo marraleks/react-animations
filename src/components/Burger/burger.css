@@ -81,3 +81,9 @@
 .hamburger span:last-child:before,.hamburger span:last-child:after{
 	animation-delay:150ms;
 }
+
+@media (max-width: 1000px) {
+	.hamburger{
+		display: none;
+	}
+  }

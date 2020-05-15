@@ -45,3 +45,17 @@ ul {
 .logo {
   display: flex;
 }
+
+@media (max-width: 1000px) {
+  ul {
+    margin-right: 15px;
+  }
+  .nav-links{
+    flex: 2;
+  }
+  .li0:hover,
+  .li1:hover,
+  .li2:hover {
+  color: black;
+}
+}
