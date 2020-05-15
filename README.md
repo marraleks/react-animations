@@ -8,7 +8,7 @@ Individual school project created with react to get a better understanding of ho
 
 ## View project
 
-Click on [ME](https://react-animations-oeugvsh75.now.sh/) to view project. Deployed using [Vercel](https://vercel.com/).
+Click on [ME](https://react-animations-e7kt3bhrg.now.sh/) to view project. Deployed using [Vercel](https://vercel.com/).
 
 ## Install and view locally.
 
