@@ -66,6 +66,15 @@ body {
   backdrop-filter: saturate(1000%);
 }
 
+.logohover {
+  transition: 0.2s;
+  transition-property: background, border, transform;
+  transform: scale(1.5);
+  background: rgb(255, 104, 104);
+  border: rgb(255, 104, 104);
+  content: "Go home";
+}
+
 .linkHover {
   color: black;
 }

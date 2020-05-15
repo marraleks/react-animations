@@ -4,6 +4,24 @@ import Logo from "../../assets/logo/logo.png";
 import { navigate } from "@reach/router";
 
 const Header = (props) => {
+  const hover = (e) => {
+    props.hover(e);
+  };
+
+  const unHover = (e) => {
+    props.unHover(e);
+  };
+
+  const logohover = () => {
+    const cursor = document.querySelector(".cursor");
+    cursor.classList.add("logohover");
+  };
+
+  const logoUnHover = () => {
+    const cursor = document.querySelector(".cursor");
+    cursor.classList.remove("logohover");
+  };
+
   const li = ["Shop", "Gallery", "About"];
   return (
     <>
@@ -14,6 +32,8 @@ const Header = (props) => {
               src={Logo}
               alt="logo"
               height="40px"
+              onMouseOver={logohover}
+              onMouseLeave={logoUnHover}
               onClick={() => navigate("Home")}
             />
           </div>
@@ -23,12 +43,8 @@ const Header = (props) => {
                 onClick={() => navigate(each)}
                 className={"li" + index}
                 key={index}
-                onMouseOver={(e) => {
-                  props.hover(e);
-                }}
-                onMouseLeave={(e) => {
-                  props.unHover(e);
-                }}
+                onMouseOver={hover}
+                onMouseLeave={unHover}
               >
                 {each}
               </li>
