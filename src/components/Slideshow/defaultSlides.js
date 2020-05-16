@@ -1,18 +1,18 @@
 export default [
   {
     number: 1,
-    image: "images/bilde1.jpg",
+    image: "images/skull1.jpg",
   },
   {
     number: 2,
-    image: "images/bilde2.jpg",
+    image: "images/skull2.jpg",
   },
   {
     number: 3,
-    image: "images/bilde3.jpg",
+    image: "images/skull3.jpg",
   },
   {
     number: 4,
-    image: "images/bilde4.jpg",
+    image: "images/skull4.jpg",
   },
 ];
