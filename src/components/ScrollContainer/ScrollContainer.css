@@ -35,6 +35,7 @@
   display: flex;
   height: auto;
   width: 18.97px;
+  user-select: none;
 }
 
 .current {

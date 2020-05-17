@@ -91,7 +91,8 @@ body {
 .transition-background {
   background-color: white;
   position: absolute;
-  height: 100vh;
+  top: 20vh;
+  height: 80vh;
   width: 100vw;
-  z-index: 9999;
+  z-index: 5;
 }
