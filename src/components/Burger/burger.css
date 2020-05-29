@@ -1,89 +1,92 @@
-.hamburger{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position:absolute;
-	top:50%;
-	left:6%;
-  	transform:translateY(-50%);
-	z-index: 10;
-	width: 50px;
-	height: 40px;
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 40px;
 }
 
-.hamburger.active > span{
-	margin-bottom:0px;
-	transition: 0.2s;
+.hamburger.active > span {
+  margin-bottom: 0px;
+  transition: 0.2s;
 }
 
-.hamburger:hover > span:before{
-	background-color: rgb(255, 255, 255);
+.hamburger:hover > span:before {
+  background-color: rgb(255, 255, 255);
 }
-.hamburger:hover > span:after{
-	background-color: rgb(255, 255, 255);
-}
-
-.hamburger span{
-	display:block;
-	width:50px;
-	height:2px;
-	margin-bottom:8px;
-	overflow:hidden;
-	position:relative;
-	transition: 0.2s;
-
-}
-.hamburger span:last-child{
-	margin:0;
-}
-.hamburger span:before,.hamburger span:after{
-	content:"";
-	position:absolute;
-	width:100%;
-	height:100%;
-	background-color:rgb(0, 0, 0);
-}
-.hamburger span:after{
-	transform:translateX(0);
+.hamburger:hover > span:after {
+  background-color: rgb(255, 255, 255);
 }
 
-@keyframes leftBurger{
-	30%, 100%{
-		opacity: 0;
-	}
-    0%{
-		transform:translateX(0%);
-    }
-    30%{
-		transform:translateX(-200%);
-    }
+.hamburger span {
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+}
+.hamburger span:last-child {
+  margin: 0;
+}
+.hamburger span:before,
+.hamburger span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+}
+.hamburger span:after {
+  transform: translateX(0);
 }
 
-@keyframes rightBurger{
-    0%{
-		transform:translateX(200%);
-    }
-    30%{
-		transform:translateX(0%);
-    }
+@keyframes leftBurger {
+  30%,
+  100% {
+    opacity: 0;
+  }
+  0% {
+    transform: translateX(0%);
+  }
+  30% {
+    transform: translateX(-200%);
+  }
 }
 
-.hamburger:hover span:after{
-    animation: leftBurger 3s ease-in-out infinite;
-}
-.hamburger:hover span:before{
-    animation: rightBurger 3s ease-in-out infinite;
+@keyframes rightBurger {
+  0% {
+    transform: translateX(200%);
+  }
+  30% {
+    transform: translateX(0%);
+  }
 }
 
-.hamburger span:nth-child(2):before,.hamburger span:nth-child(2):after{
-	animation-delay:75ms;
+.hamburger:hover span:after {
+  animation: leftBurger 3s ease-in-out infinite;
 }
-.hamburger span:last-child:before,.hamburger span:last-child:after{
-	animation-delay:150ms;
+.hamburger:hover span:before {
+  animation: rightBurger 3s ease-in-out infinite;
+}
+
+.hamburger span:nth-child(2):before,
+.hamburger span:nth-child(2):after {
+  animation-delay: 75ms;
+}
+.hamburger span:last-child:before,
+.hamburger span:last-child:after {
+  animation-delay: 150ms;
 }
 
 @media (max-width: 1000px) {
-	.hamburger{
-		display: none;
-	}
+  .hamburger {
+    display: none;
   }
+}

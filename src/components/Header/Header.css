@@ -50,12 +50,12 @@ ul {
   ul {
     margin-right: 15px;
   }
-  .nav-links{
+  .nav-links {
     flex: 2;
   }
   .li0:hover,
   .li1:hover,
   .li2:hover {
-  color: black;
-}
+    color: black;
+  }
 }

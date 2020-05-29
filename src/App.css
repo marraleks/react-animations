@@ -80,10 +80,10 @@ body {
 }
 
 @media (max-width: 1000px) {
-  *{
+  * {
     cursor: unset;
   }
-  .cursor{
+  .cursor {
     display: none;
   }
 }
